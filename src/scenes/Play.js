@@ -25,10 +25,10 @@ class Play extends Phaser.Scene {
         this.ship02 = new Spaceship(this, game.config.width + borderUISize*3, borderUISize*5 + borderPadding*2, 'spaceship', 0, 20).setOrigin(0, 0);
         this.ship03 = new Spaceship(this, game.config.width, borderUISize*6 + borderPadding*4, 'spaceship', 0, 10).setOrigin(0, 0);
 
-        keyF = this.input.keyboard.addKey(Phaser.input.keyboard.keycodes.F);
-        keyR = this.input.keyboard.addKey(Phaser.input.keyboard.keycodes.R);
-        keyLEFT = this.input.keyboard.addKey(Phaser.input.keyboard.keycodes.LEFT);
-        keyRIGHT = this.input.keyboard.addKey(Phaser.input.keyboard.keycodes.RIGHT);
+        keyF = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.F);
+        keyR = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.R);
+        keyLEFT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
+        keyRIGHT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT);
 
         this.anims.create({
             key: 'explode',
@@ -98,7 +98,7 @@ class Play extends Phaser.Scene {
             rocket.x + rocket.width > ship.x && 
             rocket.y < ship.y + ship.height &&
             rocket.height + rocket.y > ship. y) {
-            return true;
+                return true;
         } else {
             return false;
         }
